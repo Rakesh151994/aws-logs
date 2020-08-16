@@ -1,0 +1,16 @@
+2020-08-16 10:10:13,716 [INFO] (5704 MainThread) [tailLogs.py-56] [root tailLogs main] Starting tail logs task with batch id 81e529e5-5cec-4e52-97c0-b2cb0f79444a
+2020-08-16 10:10:13,727 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/ecs/ecs-init.log
+2020-08-16 10:10:13,730 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/eb-ecs-mgr.log
+2020-08-16 10:10:13,732 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/containers/rakesh-3c305d512697-stdouterr.log
+2020-08-16 10:10:13,735 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/docker-events.log
+2020-08-16 10:10:13,738 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/containers/mysql-b34ebea6b6d2-stdouterr.log
+2020-08-16 10:10:13,746 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/ecs/ecs-agent.log
+2020-08-16 10:10:13,751 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/docker
+2020-08-16 10:10:13,755 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/eb-activity.log
+2020-08-16 10:10:13,755 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/docker-ps.log
+2020-08-16 10:10:13,759 [INFO] (5704 MainThread) [upload_tools.py-293] [root upload_tools execute] Successfully tailed file /var/log/eb-commandprocessor.log
+2020-08-16 10:10:13,871 [INFO] (5704 MainThread) [s3_tools.py-208] [root s3_tools _process_result] Received status code 200 with text: 
+2020-08-16 10:10:13,871 [INFO] (5704 MainThread) [upload_tools.py-317] [root upload_tools __exit__] Successfully uploaded tailed content for 10 files to s3 at location resources/environments/logs/tail/e-qwema2dzau/i-0cbeb4542379eddc1/TailLogs-1597572613759.out
+2020-08-16 10:10:13,871 [INFO] (5704 MainThread) [tailLogs.py-92] [root tailLogs main] [Instance: i-0cbeb4542379eddc1] Successfully finished tailing 10 log(s)
+2020-08-16 10:14:22,448 [INFO] (6298 MainThread) [bundleLogs.py-54] [root bundleLogs main] Starting bundle logs task with batch id e23ab727-8b58-4b92-8612-13ef1f3289ac
+2020-08-16 10:14:22,464 [INFO] (6298 MainThread) [upload_tools.py-364] [root upload_tools execute] Successfully archived file /var/log/ecs/ecs-init.log to /tmp/BundleLogs-e23ab727-8b58-4b92-8612-13ef1f3289ac.zip

@@ -1,0 +1,162 @@
+[2020-08-16T10:05:10.199Z] DEBUG [3069]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:05:10.200Z] DEBUG [3069]  : Checking if the command processor should execute...
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Checking whether the command is applicable to instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:05:10.215Z] INFO  [3069]  : Command is applicable to this instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Checking if the received command stage is valid..
+[2020-08-16T10:05:10.215Z] INFO  [3069]  : No stage_num in command. Valid stage..
+[2020-08-16T10:05:10.215Z] INFO  [3069]  : Received command CMD-PreInit: {"api_version"=>"1.0", "request_id"=>"0", "command_name"=>"CMD-PreInit"}
+[2020-08-16T10:05:10.215Z] INFO  [3069]  : Command processor should execute command.
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Storing current stage..
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:05:10.215Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:05:10.217Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:05:10.218Z] INFO  [3069]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:05:10.219Z] INFO  [3069]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:05:10.219Z] INFO  [3069]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:05:10.219Z] DEBUG [3069]  : Refreshing metadata...
+[2020-08-16T10:05:10.219Z] DEBUG [3069]  : Using cached environment metadata.
+[2020-08-16T10:05:10.219Z] INFO  [3069]  : Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+[2020-08-16T10:05:10.219Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_AppSourceUrlFileContent||url..
+[2020-08-16T10:05:10.220Z] INFO  [3069]  : Created appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+[2020-08-16T10:05:10.220Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent..
+[2020-08-16T10:05:10.221Z] INFO  [3069]  : Created container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2020-08-16T10:05:10.221Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:05:10.226Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:05:10.226Z] INFO  [3069]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:05:10.227Z] INFO  [3069]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:05:10.227Z] INFO  [3069]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:05:10.227Z] DEBUG [3069]  : Retrieving metadata for key: AWS::CloudFormation::Init||Infra-WriteApplication2||files..
+[2020-08-16T10:05:10.228Z] DEBUG [3069]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||ManifestFileS3Key..
+[2020-08-16T10:05:10.482Z] INFO  [3069]  : Finding latest manifest from bucket 'elasticbeanstalk-us-east-1-557533364516' with prefix 'resources/environments/e-qwema2dzau/_runtime/versions/manifest_'.
+[2020-08-16T10:05:10.596Z] INFO  [3069]  : Found manifest with key 'resources/environments/e-qwema2dzau/_runtime/versions/manifest_1597572234517'.
+[2020-08-16T10:05:10.611Z] INFO  [3069]  : Updated manifest cache: deployment ID 1 and serial 1.
+[2020-08-16T10:05:10.611Z] DEBUG [3069]  : Loaded definition of Command CMD-PreInit.
+[2020-08-16T10:05:10.611Z] INFO  [3069]  : Executing Initialization
+[2020-08-16T10:05:10.611Z] INFO  [3069]  : Executing command: CMD-PreInit...
+[2020-08-16T10:05:10.611Z] INFO  [3069]  : Executing command CMD-PreInit activities...
+[2020-08-16T10:05:10.611Z] DEBUG [3069]  : Setting environment variables..
+[2020-08-16T10:05:10.612Z] INFO  [3069]  : Running AddonsBefore for command CMD-PreInit...
+[2020-08-16T10:05:12.970Z] DEBUG [3069]  : Running stages of Command CMD-PreInit from stage 0 to stage 0...
+[2020-08-16T10:05:12.970Z] INFO  [3069]  : Running stage 0 of command CMD-PreInit...
+[2020-08-16T10:05:12.970Z] DEBUG [3069]  : Loaded 2 actions for stage 0.
+[2020-08-16T10:05:12.970Z] INFO  [3069]  : Running 1 of 2 actions: DownloadSourceBundle...
+[2020-08-16T10:05:13.330Z] INFO  [3069]  : Running 2 of 2 actions: PreInitHook...
+[2020-08-16T10:05:55.809Z] INFO  [3069]  : Running AddonsAfter for command CMD-PreInit...
+[2020-08-16T10:05:55.810Z] INFO  [3069]  : Command CMD-PreInit succeeded!
+[2020-08-16T10:05:55.810Z] INFO  [3069]  : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2020-08-16T10:06:20.655Z] DEBUG [4010]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:06:20.655Z] DEBUG [4010]  : Checking if the command processor should execute...
+[2020-08-16T10:06:20.657Z] DEBUG [4010]  : Checking whether the command is applicable to instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:06:20.658Z] INFO  [4010]  : Command is applicable to this instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:06:20.658Z] DEBUG [4010]  : Checking if the received command stage is valid..
+[2020-08-16T10:06:20.658Z] INFO  [4010]  : No stage_num in command. Valid stage..
+[2020-08-16T10:06:20.658Z] INFO  [4010]  : Received command CMD-Startup: {"execution_data"=>"{\"leader_election\":\"true\"}", "instance_ids"=>["i-0cbeb4542379eddc1"], "command_name"=>"CMD-Startup", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"f5d0438f-9855-4a57-b3a5-ce3969537af2"}
+[2020-08-16T10:06:20.658Z] INFO  [4010]  : Command processor should execute command.
+[2020-08-16T10:06:20.658Z] DEBUG [4010]  : Storing current stage..
+[2020-08-16T10:06:20.658Z] DEBUG [4010]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-16T10:06:20.658Z] DEBUG [4010]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:06:20.658Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:06:20.660Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:06:20.660Z] INFO  [4010]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:06:20.662Z] INFO  [4010]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:06:20.662Z] INFO  [4010]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:06:20.663Z] DEBUG [4010]  : Refreshing metadata...
+[2020-08-16T10:06:21.069Z] DEBUG [4010]  : Refreshed environment metadata.
+[2020-08-16T10:06:21.071Z] INFO  [4010]  : Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+[2020-08-16T10:06:21.071Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_AppSourceUrlFileContent||url..
+[2020-08-16T10:06:21.072Z] INFO  [4010]  : Created appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+[2020-08-16T10:06:21.072Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent..
+[2020-08-16T10:06:21.074Z] INFO  [4010]  : Created container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2020-08-16T10:06:21.074Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:06:21.075Z] DEBUG [4010]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:06:21.075Z] INFO  [4010]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:06:21.076Z] INFO  [4010]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:06:21.076Z] INFO  [4010]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:06:21.076Z] DEBUG [4010]  : Loaded definition of Command CMD-Startup.
+[2020-08-16T10:06:21.078Z] INFO  [4010]  : Executing Application deployment
+[2020-08-16T10:06:21.078Z] INFO  [4010]  : Executing command: CMD-Startup...
+[2020-08-16T10:06:21.078Z] INFO  [4010]  : Executing command CMD-Startup activities...
+[2020-08-16T10:06:21.078Z] DEBUG [4010]  : Setting environment variables..
+[2020-08-16T10:06:21.078Z] INFO  [4010]  : Running AddonsBefore for command CMD-Startup...
+[2020-08-16T10:06:21.208Z] DEBUG [4010]  : Running stages of Command CMD-Startup from stage 0 to stage 1...
+[2020-08-16T10:06:21.208Z] INFO  [4010]  : Running stage 0 of command CMD-Startup...
+[2020-08-16T10:06:21.208Z] INFO  [4010]  : Running leader election...
+[2020-08-16T10:06:21.611Z] INFO  [4010]  : Instance is Leader.
+[2020-08-16T10:06:21.611Z] DEBUG [4010]  : Loaded 7 actions for stage 0.
+[2020-08-16T10:06:21.611Z] INFO  [4010]  : Running 1 of 7 actions: HealthdLogRotation...
+[2020-08-16T10:06:21.620Z] INFO  [4010]  : Running 2 of 7 actions: HealthdHTTPDLogging...
+[2020-08-16T10:06:21.620Z] INFO  [4010]  : Running 3 of 7 actions: HealthdNginxLogging...
+[2020-08-16T10:06:21.621Z] INFO  [4010]  : Running 4 of 7 actions: EbExtensionPreBuild...
+[2020-08-16T10:06:22.064Z] INFO  [4010]  : Running 5 of 7 actions: AppDeployPreHook...
+[2020-08-16T10:06:23.492Z] INFO  [4010]  : Running 6 of 7 actions: EbExtensionPostBuild...
+[2020-08-16T10:06:23.915Z] INFO  [4010]  : Running 7 of 7 actions: InfraCleanEbExtension...
+[2020-08-16T10:06:23.916Z] INFO  [4010]  : Running stage 1 of command CMD-Startup...
+[2020-08-16T10:06:23.916Z] DEBUG [4010]  : Loaded 3 actions for stage 1.
+[2020-08-16T10:06:23.916Z] INFO  [4010]  : Running 1 of 3 actions: AppDeployEnactHook...
+[2020-08-16T10:06:53.945Z] INFO  [4010]  : Running 2 of 3 actions: AppDeployPostHook...
+[2020-08-16T10:06:55.728Z] INFO  [4010]  : Running 3 of 3 actions: PostInitHook...
+[2020-08-16T10:06:55.729Z] INFO  [4010]  : Running AddonsAfter for command CMD-Startup...
+[2020-08-16T10:06:55.917Z] INFO  [4010]  : Command CMD-Startup succeeded!
+[2020-08-16T10:06:55.918Z] INFO  [4010]  : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"Could not determine task definition or revision from deployment manifest.","severity":"TRACE","timestamp":1597572384},{"msg":"Starting new ECS task with awseb-MultidockerDeploy-env-qwema2dzau.","severity":"TRACE","timestamp":1597572385},{"msg":"ECS task: arn:aws:ecs:us-east-1:557533364516:task/f6f8d8f1-2992-41d5-80aa-004a23c4b847 is RUNNING.","severity":"TRACE","timestamp":1597572413},{"msg":"Could not determine task definition or revision from deployment manifest.","severity":"TRACE","timestamp":1597572415}]}]}
+[2020-08-16T10:10:13.524Z] DEBUG [5689]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:10:13.525Z] DEBUG [5689]  : Checking if the command processor should execute...
+[2020-08-16T10:10:13.527Z] DEBUG [5689]  : Checking whether the command is applicable to instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:10:13.527Z] INFO  [5689]  : Command is applicable to this instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:10:13.527Z] DEBUG [5689]  : Checking if the received command stage is valid..
+[2020-08-16T10:10:13.527Z] INFO  [5689]  : No stage_num in command. Valid stage..
+[2020-08-16T10:10:13.527Z] INFO  [5689]  : Received command CMD-TailLogs: {"execution_data"=>"*", "instance_ids"=>["i-0cbeb4542379eddc1"], "data"=>"81e529e5-5cec-4e52-97c0-b2cb0f79444a", "command_name"=>"CMD-TailLogs", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"81e529e5-5cec-4e52-97c0-b2cb0f79444a"}
+[2020-08-16T10:10:13.527Z] INFO  [5689]  : Command processor should execute command.
+[2020-08-16T10:10:13.527Z] DEBUG [5689]  : Storing current stage..
+[2020-08-16T10:10:13.527Z] DEBUG [5689]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-16T10:10:13.528Z] DEBUG [5689]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:10:13.528Z] DEBUG [5689]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:10:13.530Z] DEBUG [5689]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:10:13.531Z] INFO  [5689]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:10:13.533Z] INFO  [5689]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:10:13.533Z] INFO  [5689]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:10:13.533Z] DEBUG [5689]  : Loaded definition of Command CMD-TailLogs.
+[2020-08-16T10:10:13.533Z] INFO  [5689]  : Executing CMD-TailLogs
+[2020-08-16T10:10:13.534Z] INFO  [5689]  : Executing command: CMD-TailLogs...
+[2020-08-16T10:10:13.534Z] INFO  [5689]  : Executing command CMD-TailLogs activities...
+[2020-08-16T10:10:13.534Z] DEBUG [5689]  : Setting environment variables..
+[2020-08-16T10:10:13.534Z] INFO  [5689]  : Running AddonsBefore for command CMD-TailLogs...
+[2020-08-16T10:10:13.534Z] DEBUG [5689]  : Running stages of Command CMD-TailLogs from stage 0 to stage 1...
+[2020-08-16T10:10:13.534Z] INFO  [5689]  : Running stage 0 of command CMD-TailLogs...
+[2020-08-16T10:10:13.534Z] DEBUG [5689]  : Loaded 1 actions for stage 0.
+[2020-08-16T10:10:13.534Z] INFO  [5689]  : Running 1 of 1 actions: DockerPS...
+[2020-08-16T10:10:13.621Z] INFO  [5689]  : Running stage 1 of command CMD-TailLogs...
+[2020-08-16T10:10:13.621Z] DEBUG [5689]  : Loaded 1 actions for stage 1.
+[2020-08-16T10:10:13.621Z] INFO  [5689]  : Running 1 of 1 actions: TailLogs...
+[2020-08-16T10:10:13.882Z] INFO  [5689]  : Running AddonsAfter for command CMD-TailLogs...
+[2020-08-16T10:10:13.883Z] INFO  [5689]  : Command CMD-TailLogs succeeded!
+[2020-08-16T10:10:13.883Z] INFO  [5689]  : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-0cbeb4542379eddc1] Successfully finished tailing 10 log(s)","severity":"INFO","timestamp":1597572613883}]}]}
+[2020-08-16T10:14:22.359Z] DEBUG [6293]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:14:22.359Z] DEBUG [6293]  : Checking if the command processor should execute...
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Checking whether the command is applicable to instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:14:22.361Z] INFO  [6293]  : Command is applicable to this instance (i-0cbeb4542379eddc1)..
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Checking if the received command stage is valid..
+[2020-08-16T10:14:22.361Z] INFO  [6293]  : No stage_num in command. Valid stage..
+[2020-08-16T10:14:22.361Z] INFO  [6293]  : Received command CMD-BundleLogs: {"execution_data"=>"*", "instance_ids"=>["i-0cbeb4542379eddc1"], "data"=>"e23ab727-8b58-4b92-8612-13ef1f3289ac", "command_name"=>"CMD-BundleLogs", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"e23ab727-8b58-4b92-8612-13ef1f3289ac"}
+[2020-08-16T10:14:22.361Z] INFO  [6293]  : Command processor should execute command.
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Storing current stage..
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-16T10:14:22.361Z] DEBUG [6293]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-16T10:14:22.362Z] DEBUG [6293]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-16T10:14:22.363Z] INFO  [6293]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Updating Command definition of addon logstreaming.
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Updating Command definition of addon logpublish.
+[2020-08-16T10:14:22.364Z] DEBUG [6293]  : Loaded definition of Command CMD-BundleLogs.
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Executing CMD-BundleLogs
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Executing command: CMD-BundleLogs...
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Executing command CMD-BundleLogs activities...
+[2020-08-16T10:14:22.364Z] DEBUG [6293]  : Setting environment variables..
+[2020-08-16T10:14:22.364Z] INFO  [6293]  : Running AddonsBefore for command CMD-BundleLogs...
+[2020-08-16T10:14:22.365Z] DEBUG [6293]  : Running stages of Command CMD-BundleLogs from stage 0 to stage 0...
+[2020-08-16T10:14:22.365Z] INFO  [6293]  : Running stage 0 of command CMD-BundleLogs...
+[2020-08-16T10:14:22.365Z] DEBUG [6293]  : Loaded 1 actions for stage 0.
+[2020-08-16T10:14:22.365Z] INFO  [6293]  : Running 1 of 1 actions: BundleLogs...

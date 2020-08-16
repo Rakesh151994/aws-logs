@@ -1,0 +1,2 @@
+2020-08-16 10:10:01,800 [INFO] (5659 MainThread) [publishLogs.py-61] [root publishLogs main] Starting publish log task with batch id a5d63200-dfa8-11ea-825c-0afc4e4d0a61
+2020-08-16 10:10:01,808 [INFO] (5659 MainThread) [publishLogs.py-86] [root publishLogs main] Log publication is disabled

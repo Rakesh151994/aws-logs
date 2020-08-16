@@ -1,0 +1,5 @@
+'docker ps' ran at Sun Aug 16 10:10:13 UTC 2020: 
+CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS                   PORTS                               NAMES
+3c305d512697        rakesh1594/rakesh:3.2            "java -jar /app.jar"     3 minutes ago       Up 3 minutes             0.0.0.0:5000->5000/tcp              ecs-awseb-MultidockerDeploy-env-qwema2dzau-1-rakesh-eaaebae9c9eab2a39b01
+b34ebea6b6d2        mysql:5.7                        "docker-entrypoint.s…"   3 minutes ago       Up 3 minutes             0.0.0.0:3306->3306/tcp, 33060/tcp   ecs-awseb-MultidockerDeploy-env-qwema2dzau-1-mysql-96e3e889968cf1b38a01
+d08d36b80371        amazon/amazon-ecs-agent:latest   "/agent"                 4 minutes ago       Up 4 minutes (healthy)                                       ecs-agent
