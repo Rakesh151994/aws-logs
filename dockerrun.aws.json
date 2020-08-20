@@ -29,7 +29,7 @@
         },
         {
             "name": "rakesh",
-            "image": "rakesh1594/rakesh:3.2",
+            "image": "rakesh1594/rakesh:multi-docker",
             "essential": true,
             "memory": 256,
             "portMappings": [{

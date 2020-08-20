@@ -1,0 +1,862 @@
+-------------------------------------
+/var/log/ecs/ecs-init.log
+-------------------------------------
+2020-08-20T08:18:28Z [INFO] pre-start
+2020-08-20T08:18:30Z [INFO] start
+2020-08-20T08:18:30Z [INFO] No existing agent container to remove.
+2020-08-20T08:18:30Z [INFO] Starting Amazon Elastic Container Service Agent
+
+
+
+-------------------------------------
+/var/log/containers/rakesh-7e912f6a099c-stdouterr.log
+-------------------------------------
+         - @ConditionalOnClass did not find required class 'org.apache.solr.client.solrj.SolrClient' (OnClassCondition)
+
+   SpringApplicationAdminJmxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.application.admin.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+
+   TaskSchedulingAutoConfiguration#taskScheduler:
+      Did not match:
+         - @ConditionalOnBean (names: org.springframework.context.annotation.internalScheduledAnnotationProcessor; SearchStrategy: all) did not find any beans named org.springframework.context.annotation.internalScheduledAnnotationProcessor (OnBeanCondition)
+
+   ThymeleafAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.thymeleaf.spring5.SpringTemplateEngine' (OnClassCondition)
+
+   TransactionAutoConfiguration#transactionalOperator:
+      Did not match:
+         - @ConditionalOnSingleCandidate (types: org.springframework.transaction.ReactiveTransactionManager; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   TransactionAutoConfiguration.EnableTransactionManagementConfiguration.JdkDynamicAutoProxyConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.aop.proxy-target-class=false) did not find property 'proxy-target-class' (OnPropertyCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.security.authentication.AuthenticationManager' (OnClassCondition)
+
+   WebClientAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.function.client.WebClient' (OnClassCondition)
+
+   WebFluxAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) did not find property 'enabled' (OnPropertyCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
+      Did not match:
+         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarAssetLocator (OnEnabledResourceChainCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#localeResolver:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.locale) did not find property 'locale' (OnPropertyCondition)
+
+   WebServiceTemplateAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.oxm.Marshaller' (OnClassCondition)
+
+   WebServicesAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.ws.transport.http.MessageDispatcherServlet' (OnClassCondition)
+
+   WebSocketMessagingAutoConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer' (OnClassCondition)
+
+   WebSocketReactiveAutoConfiguration:
+      Did not match:
+         - @ConditionalOnWebApplication did not find reactive web application classes (OnWebApplicationCondition)
+
+   WebSocketServletAutoConfiguration.JettyWebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer' (OnClassCondition)
+
+   WebSocketServletAutoConfiguration.UndertowWebSocketConfiguration:
+      Did not match:
+         - @ConditionalOnClass did not find required class 'io.undertow.websockets.jsr.Bootstrap' (OnClassCondition)
+
+   XADataSourceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnBean (types: org.springframework.boot.jdbc.XADataSourceWrapper; SearchStrategy: all) did not find any beans of type org.springframework.boot.jdbc.XADataSourceWrapper (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required classes 'javax.sql.DataSource', 'javax.transaction.TransactionManager', 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+
+    org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+
+    org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+
+
+
+2020-08-20 08:19:55.328  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2020-08-20 08:19:55.330  INFO 1 --- [           main] c.techm.makerslab.MakerslabApplication   : Started MakerslabApplication in 19.986 seconds (JVM running for 23.608)
+
+
+
+-------------------------------------
+/var/log/eb-ecs-mgr.log
+-------------------------------------
+2020-08-20T08:19:10Z + '[' -z '' ']'
+2020-08-20T08:19:10Z + sleep 3
+2020-08-20T08:19:13Z + TIMEOUT=837
+2020-08-20T08:19:13Z + '[' 837 -le 0 ']'
+2020-08-20T08:19:13Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:13Z +++ jq -r .KnownStatus
+2020-08-20T08:19:13Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:13Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:13Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:13Z + '[' -z PENDING ']'
+2020-08-20T08:19:13Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:13Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:13Z + sleep 3
+2020-08-20T08:19:16Z + TIMEOUT=834
+2020-08-20T08:19:16Z + '[' 834 -le 0 ']'
+2020-08-20T08:19:16Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:16Z +++ jq -r .KnownStatus
+2020-08-20T08:19:16Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:16Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:16Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:16Z + '[' -z PENDING ']'
+2020-08-20T08:19:16Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:16Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:16Z + sleep 3
+2020-08-20T08:19:19Z + TIMEOUT=831
+2020-08-20T08:19:19Z + '[' 831 -le 0 ']'
+2020-08-20T08:19:19Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:19Z +++ jq -r .KnownStatus
+2020-08-20T08:19:19Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:19Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:19Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:19Z + '[' -z PENDING ']'
+2020-08-20T08:19:19Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:19Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:19Z + sleep 3
+2020-08-20T08:19:22Z + TIMEOUT=828
+2020-08-20T08:19:22Z + '[' 828 -le 0 ']'
+2020-08-20T08:19:22Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:22Z +++ jq -r .KnownStatus
+2020-08-20T08:19:22Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:22Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:22Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:22Z + '[' -z PENDING ']'
+2020-08-20T08:19:22Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:22Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:22Z + sleep 3
+2020-08-20T08:19:25Z + TIMEOUT=825
+2020-08-20T08:19:25Z + '[' 825 -le 0 ']'
+2020-08-20T08:19:25Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:25Z +++ jq -r .KnownStatus
+2020-08-20T08:19:25Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:25Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:25Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:25Z + '[' -z PENDING ']'
+2020-08-20T08:19:25Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:25Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:25Z + sleep 3
+2020-08-20T08:19:28Z + TIMEOUT=822
+2020-08-20T08:19:28Z + '[' 822 -le 0 ']'
+2020-08-20T08:19:28Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:28Z +++ jq -r .KnownStatus
+2020-08-20T08:19:28Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:28Z + KNOWN_STATUS=PENDING
+2020-08-20T08:19:28Z + '[' PENDING '!=' RUNNING ']'
+2020-08-20T08:19:28Z + '[' -z PENDING ']'
+2020-08-20T08:19:28Z + '[' PENDING = NONE ']'
+2020-08-20T08:19:28Z + '[' PENDING = PENDING ']'
+2020-08-20T08:19:28Z + sleep 3
+2020-08-20T08:19:31Z + TIMEOUT=819
+2020-08-20T08:19:31Z + '[' 819 -le 0 ']'
+2020-08-20T08:19:31Z ++ eval curl -sS 'http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN' '|' jq -r .KnownStatus
+2020-08-20T08:19:31Z +++ jq -r .KnownStatus
+2020-08-20T08:19:31Z +++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:31Z + KNOWN_STATUS=RUNNING
+2020-08-20T08:19:31Z + '[' RUNNING '!=' RUNNING ']'
+2020-08-20T08:19:31Z ++ jq -r -c '.Containers[] | .DockerId + "," + .Name'
+2020-08-20T08:19:31Z ++ curl -sS 'http://localhost:51678/v1/tasks?taskarn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c'
+2020-08-20T08:19:31Z + for CONTAINER in '`curl -sS http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN | jq -r -c '\''.Containers[] | .DockerId + "," + .Name'\''`'
+2020-08-20T08:19:31Z ++ cut -c 1-12
+2020-08-20T08:19:31Z ++ awk -F , '{print $1}'
+2020-08-20T08:19:31Z ++ echo cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15,mysql
+2020-08-20T08:19:31Z + CONTAINER_ID=cffacbcacdb6
+2020-08-20T08:19:31Z ++ awk -F , '{print $2}'
+2020-08-20T08:19:31Z ++ echo cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15,mysql
+2020-08-20T08:19:31Z + CONTAINER_NAME=mysql
+2020-08-20T08:19:31Z + for CONTAINER in '`curl -sS http://localhost:51678/v1/tasks?taskarn=$EB_CONFIG_ECS_TASK_ARN | jq -r -c '\''.Containers[] | .DockerId + "," + .Name'\''`'
+2020-08-20T08:19:31Z + docker logs -f cffacbcacdb6
+2020-08-20T08:19:31Z ++ cut -c 1-12
+2020-08-20T08:19:31Z ++ awk -F , '{print $1}'
+2020-08-20T08:19:31Z ++ echo 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1,rakesh
+2020-08-20T08:19:31Z + CONTAINER_ID=7e912f6a099c
+2020-08-20T08:19:31Z ++ awk -F , '{print $2}'
+2020-08-20T08:19:31Z ++ echo 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1,rakesh
+2020-08-20T08:19:31Z + CONTAINER_NAME=rakesh
+2020-08-20T08:19:31Z + trace 'ECS task: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c is RUNNING.'
+2020-08-20T08:19:31Z + echo 'ECS task: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c is RUNNING.'
+2020-08-20T08:19:31Z ECS task: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c is RUNNING.
+2020-08-20T08:19:31Z + eventHelper.py --msg 'ECS task: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c is RUNNING.' --severity TRACE
+2020-08-20T08:19:31Z + docker logs -f 7e912f6a099c
+2020-08-20T08:19:32Z + exit 0
+
+
+
+-------------------------------------
+/var/log/docker-events.log
+-------------------------------------
+2020-08-20T08:19:01.023996423Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a721a6f0fd8508d309f9db6f8588b4bb59e8822f2ee9df7c6b22ecb96bc14321, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:01.024153760Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a721a6f0fd8508d309f9db6f8588b4bb59e8822f2ee9df7c6b22ecb96bc14321, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:01.271028393Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a721a6f0fd8508d309f9db6f8588b4bb59e8822f2ee9df7c6b22ecb96bc14321, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:01.276365429Z container health_status: healthy c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:06.802636419Z image untag sha256:d0c60e837d9ef9808d76a2842842e926d848410cab5d5b61435c9c4e4a4cfbca (name=sha256:d0c60e837d9ef9808d76a2842842e926d848410cab5d5b61435c9c4e4a4cfbca)
+2020-08-20T08:19:06.808792487Z image delete sha256:d0c60e837d9ef9808d76a2842842e926d848410cab5d5b61435c9c4e4a4cfbca (name=sha256:d0c60e837d9ef9808d76a2842842e926d848410cab5d5b61435c9c4e4a4cfbca)
+2020-08-20T08:19:06.875046557Z image tag sha256:632e41712549b9ecb8ed2a4ea4e1b1d4574b5856f409210bfdc29e7f53849e1f (name=amazon/amazon-ecs-agent:latest)
+2020-08-20T08:19:22.963943488Z image pull mysql:5.7 (name=mysql)
+2020-08-20T08:19:23.131327965Z volume create ff4ce3c8c03b959f0146cba7bdc2a1d3ced81349780cb08e62d20f5cd5a252dc (driver=local)
+2020-08-20T08:19:23.170689982Z container create cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15 (com.amazonaws.ecs.cluster=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.container-name=mysql, com.amazonaws.ecs.task-arn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, com.amazonaws.ecs.task-definition-family=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.task-definition-version=1, image=mysql:5.7, name=ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-mysql-d487de839a8bbed68301)
+2020-08-20T08:19:23.288138597Z network connect a8cbf394d12f428aac9a0743d58cbfd381adb98218a92880d50316dcb5e5a84f (container=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15, name=bridge, type=bridge)
+2020-08-20T08:19:23.292169088Z volume mount ff4ce3c8c03b959f0146cba7bdc2a1d3ced81349780cb08e62d20f5cd5a252dc (container=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15, destination=/var/lib/mysql, driver=local, propagation=, read/write=true)
+2020-08-20T08:19:23.643841099Z container start cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15 (com.amazonaws.ecs.cluster=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.container-name=mysql, com.amazonaws.ecs.task-arn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, com.amazonaws.ecs.task-definition-family=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.task-definition-version=1, image=mysql:5.7, name=ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-mysql-d487de839a8bbed68301)
+2020-08-20T08:19:30.806713568Z image pull rakesh1594/rakesh:multi-docker (name=rakesh1594/rakesh)
+2020-08-20T08:19:31.006915755Z volume create 8401060beac34941e744c4020141ce02c9fecf29d32c31e44e3c6a0a612110a8 (driver=local)
+2020-08-20T08:19:31.046682225Z container create 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1 (com.amazonaws.ecs.cluster=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.container-name=rakesh, com.amazonaws.ecs.task-arn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, com.amazonaws.ecs.task-definition-family=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.task-definition-version=1, image=rakesh1594/rakesh:multi-docker, name=ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-rakesh-a6ca93eb8b8885ea3100)
+2020-08-20T08:19:31.170869816Z network connect a8cbf394d12f428aac9a0743d58cbfd381adb98218a92880d50316dcb5e5a84f (container=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1, name=bridge, type=bridge)
+2020-08-20T08:19:31.179041132Z volume mount 8401060beac34941e744c4020141ce02c9fecf29d32c31e44e3c6a0a612110a8 (container=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1, destination=/tmp, driver=local, propagation=, read/write=true)
+2020-08-20T08:19:31.276618396Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=545f94775e6167a960eb6fa8c95cef4fb758131f2fe43ddcddeff79185398435, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:31.276679298Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=545f94775e6167a960eb6fa8c95cef4fb758131f2fe43ddcddeff79185398435, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:31.548040191Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=545f94775e6167a960eb6fa8c95cef4fb758131f2fe43ddcddeff79185398435, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:19:31.658041765Z container start 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1 (com.amazonaws.ecs.cluster=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.container-name=rakesh, com.amazonaws.ecs.task-arn=arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, com.amazonaws.ecs.task-definition-family=awseb-MakerslabMultidocker-env-xp7h7a8t4h, com.amazonaws.ecs.task-definition-version=1, image=rakesh1594/rakesh:multi-docker, name=ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-rakesh-a6ca93eb8b8885ea3100)
+2020-08-20T08:19:33.727866238Z image tag sha256:6807de078c4b1796174df98db1a7f98827e463c1184aa4a4e62eb01fd64e03bd (name=rakesh1594/rakesh:multi-docker)
+2020-08-20T08:19:33.935349896Z image tag sha256:718a6da099d82183c064a964523c0deca80619cb033aadd15854771fe592a480 (name=mysql:5.7)
+2020-08-20T08:19:34.074378181Z image tag sha256:632e41712549b9ecb8ed2a4ea4e1b1d4574b5856f409210bfdc29e7f53849e1f (name=amazon/amazon-ecs-agent:latest)
+2020-08-20T08:20:01.560756698Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=afcecb3ec9d57b1066430593235a2b7b08c7d3dd49965ad4d31f0baadcfdc154, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:20:01.564399084Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=afcecb3ec9d57b1066430593235a2b7b08c7d3dd49965ad4d31f0baadcfdc154, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:20:02.233608931Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=afcecb3ec9d57b1066430593235a2b7b08c7d3dd49965ad4d31f0baadcfdc154, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:20:32.252445574Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=301717176b54dc32e69710bd1ec1f90f2757baab04d161a0a8e4e78da0233f22, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:20:32.252521823Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=301717176b54dc32e69710bd1ec1f90f2757baab04d161a0a8e4e78da0233f22, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:20:32.366712766Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=301717176b54dc32e69710bd1ec1f90f2757baab04d161a0a8e4e78da0233f22, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:02.373853920Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=dfd48c2a9c022681196bde0da89ae82b7ff6edb7aa8e42ad60cf5be2a121ef51, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:02.373932388Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=dfd48c2a9c022681196bde0da89ae82b7ff6edb7aa8e42ad60cf5be2a121ef51, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:02.494877184Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=dfd48c2a9c022681196bde0da89ae82b7ff6edb7aa8e42ad60cf5be2a121ef51, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:32.501386475Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9ad019da039716211b520845371b8500e6517766f8519dcd27649469297a3611, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:32.501451562Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9ad019da039716211b520845371b8500e6517766f8519dcd27649469297a3611, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:21:32.605427862Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9ad019da039716211b520845371b8500e6517766f8519dcd27649469297a3611, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:02.611807690Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a776eeb8a19e088ec08dc727867035d7e6682c7d634fd796f030d4ad6bf60c1b, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:02.611882378Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a776eeb8a19e088ec08dc727867035d7e6682c7d634fd796f030d4ad6bf60c1b, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:02.730940009Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=a776eeb8a19e088ec08dc727867035d7e6682c7d634fd796f030d4ad6bf60c1b, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:32.739483156Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f6f821d988fef6feeca1e82ea6405089c5dcb6273ff8c625b12b1a11ae5385c2, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:32.739566964Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f6f821d988fef6feeca1e82ea6405089c5dcb6273ff8c625b12b1a11ae5385c2, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:22:32.839008071Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f6f821d988fef6feeca1e82ea6405089c5dcb6273ff8c625b12b1a11ae5385c2, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:02.847050498Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=782cae2caee2824680c99a6b77e8a47761aa7014786a1ae0119c31fd93d4ced0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:02.847124964Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=782cae2caee2824680c99a6b77e8a47761aa7014786a1ae0119c31fd93d4ced0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:02.968203193Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=782cae2caee2824680c99a6b77e8a47761aa7014786a1ae0119c31fd93d4ced0, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:32.974968348Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=e086c7484d591863313b69d0b70b3eb12f976bb3ae6812664c00bbbccded1e02, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:32.975046883Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=e086c7484d591863313b69d0b70b3eb12f976bb3ae6812664c00bbbccded1e02, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:23:33.076029596Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=e086c7484d591863313b69d0b70b3eb12f976bb3ae6812664c00bbbccded1e02, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:03.085980145Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=04bb81a8464d21278860f3533949716ede6b9e6c7b64ce7e774e61534c046d30, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:03.086057741Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=04bb81a8464d21278860f3533949716ede6b9e6c7b64ce7e774e61534c046d30, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:03.218022772Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=04bb81a8464d21278860f3533949716ede6b9e6c7b64ce7e774e61534c046d30, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:33.225697909Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=725e2bf875f825abb83cac56cae78db6d45ce37ac4997a196a7947e324cb6126, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:33.225772384Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=725e2bf875f825abb83cac56cae78db6d45ce37ac4997a196a7947e324cb6126, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:24:33.326851548Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=725e2bf875f825abb83cac56cae78db6d45ce37ac4997a196a7947e324cb6126, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:03.337359984Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=ce53dc087a84bbe1d78e2034c4433c76a02adc97c29ff2b5ac8e27a8ad7f3df8, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:03.337449631Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=ce53dc087a84bbe1d78e2034c4433c76a02adc97c29ff2b5ac8e27a8ad7f3df8, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:03.464383491Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=ce53dc087a84bbe1d78e2034c4433c76a02adc97c29ff2b5ac8e27a8ad7f3df8, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:33.472928966Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=c02a3178bed9c3057dc964b76342276281cf86f2fa48f6e085fa68b5eac4f59a, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:33.473000546Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=c02a3178bed9c3057dc964b76342276281cf86f2fa48f6e085fa68b5eac4f59a, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:25:33.577013621Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=c02a3178bed9c3057dc964b76342276281cf86f2fa48f6e085fa68b5eac4f59a, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:03.584625109Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9f8035a259d620b474943767e43294ed5d8ab1d686d2af397ff4bd09e229b05d, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:03.584702686Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9f8035a259d620b474943767e43294ed5d8ab1d686d2af397ff4bd09e229b05d, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:03.706934660Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=9f8035a259d620b474943767e43294ed5d8ab1d686d2af397ff4bd09e229b05d, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:33.713748895Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=41a9177ae6ccc110929c468534e06dab1a97a64718d87b257699048f6ba71785, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:33.713826523Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=41a9177ae6ccc110929c468534e06dab1a97a64718d87b257699048f6ba71785, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:26:33.817842654Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=41a9177ae6ccc110929c468534e06dab1a97a64718d87b257699048f6ba71785, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:03.825560202Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=d7743b08a3ddd4cdd42eaf741221e821f06c08ec6a5dfa5c2750312a55e8b0ec, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:03.825639650Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=d7743b08a3ddd4cdd42eaf741221e821f06c08ec6a5dfa5c2750312a55e8b0ec, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:03.949042501Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=d7743b08a3ddd4cdd42eaf741221e821f06c08ec6a5dfa5c2750312a55e8b0ec, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:33.961820683Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=7ac6362614fd8372fd221f3522f6e8d9ae277d2332a01ecbd7fdaf536af72d2f, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:33.961903167Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=7ac6362614fd8372fd221f3522f6e8d9ae277d2332a01ecbd7fdaf536af72d2f, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:27:34.056629288Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=7ac6362614fd8372fd221f3522f6e8d9ae277d2332a01ecbd7fdaf536af72d2f, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:04.063118252Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=8766530ecbd7678f6bb054fb1e23ea3a7aeaa4a3263bbf44f9c238a85062c791, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:04.063185580Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=8766530ecbd7678f6bb054fb1e23ea3a7aeaa4a3263bbf44f9c238a85062c791, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:04.183936044Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=8766530ecbd7678f6bb054fb1e23ea3a7aeaa4a3263bbf44f9c238a85062c791, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:34.194529851Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=1eaf14d9f389948cf0dab4c6c752996d061daac9d88a60d2e4fa60f8763f1636, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:34.194623987Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=1eaf14d9f389948cf0dab4c6c752996d061daac9d88a60d2e4fa60f8763f1636, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:28:34.288969674Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=1eaf14d9f389948cf0dab4c6c752996d061daac9d88a60d2e4fa60f8763f1636, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:04.296216477Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f3a68e5bd7f5db81c4cb481475405c62d32cb17a8cb8caed12c93c74c6ade20a, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:04.296280533Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f3a68e5bd7f5db81c4cb481475405c62d32cb17a8cb8caed12c93c74c6ade20a, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:04.422639026Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=f3a68e5bd7f5db81c4cb481475405c62d32cb17a8cb8caed12c93c74c6ade20a, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:34.433010627Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=2a908d00a2fce1d3c87648444ed356ee9a34599bb4d4b35b2b624194405cd512, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:34.433078673Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=2a908d00a2fce1d3c87648444ed356ee9a34599bb4d4b35b2b624194405cd512, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:29:34.529030651Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=2a908d00a2fce1d3c87648444ed356ee9a34599bb4d4b35b2b624194405cd512, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:04.536236280Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=4cb5da99c97576222771fdcd84770dac9b3bdc53cfaa964be3fcce97276eb5c4, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:04.536323256Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=4cb5da99c97576222771fdcd84770dac9b3bdc53cfaa964be3fcce97276eb5c4, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:04.658842016Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=4cb5da99c97576222771fdcd84770dac9b3bdc53cfaa964be3fcce97276eb5c4, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:34.666756977Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=455c2d8a5fd6deab9592f1d9fe6e62302c8ecf08615a542b3fcc23eaa85cc6a0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:34.666857914Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=455c2d8a5fd6deab9592f1d9fe6e62302c8ecf08615a542b3fcc23eaa85cc6a0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:30:34.763184088Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=455c2d8a5fd6deab9592f1d9fe6e62302c8ecf08615a542b3fcc23eaa85cc6a0, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:31:04.769803071Z container exec_create: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=3b1cc055607972961fa1c1ae1015de8315a09ce3e0efc77ab4285a67fe2cbf97, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:31:04.769868866Z container exec_start: /agent --healthcheck c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=3b1cc055607972961fa1c1ae1015de8315a09ce3e0efc77ab4285a67fe2cbf97, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+2020-08-20T08:31:04.906408057Z container exec_die c38b14701d0ed5e0bbbb8ee65969f634faec0e607ffd6f775b1e83fd3b2b017c (execID=3b1cc055607972961fa1c1ae1015de8315a09ce3e0efc77ab4285a67fe2cbf97, exitCode=0, image=amazon/amazon-ecs-agent:latest, name=ecs-agent)
+
+
+
+-------------------------------------
+/var/log/ecs/ecs-agent.log
+-------------------------------------
+level=info time=2020-08-20T08:19:10Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: recording timestamp for starting image pulltime: 2020-08-20 08:19:10.763635726 +0000 UTC m=+39.706380424" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:20Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:22Z msg="Adding image name- mysql:5.7 to Image state- sha256:718a6da099d82183c064a964523c0deca80619cb033aadd15854771fe592a480" module=types.go
+level=info time=2020-08-20T08:19:22Z msg="Updating container reference mysql in Image State - sha256:718a6da099d82183c064a964523c0deca80619cb033aadd15854771fe592a480" module=types.go
+level=info time=2020-08-20T08:19:22Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:22Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: finished pulling image mysql:5.7 for container mysql in 12.209287909s" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:22Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=]: handling container change event [PULLED]" module=task_manager.go
+level=info time=2020-08-20T08:19:22Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:22Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:22Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: creating container: mysql" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:22Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created container name mapping for task:  mysql -> ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-mysql-d487de839a8bbed68301" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:22Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created docker container for task: mysql -> cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:23Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created docker container for task: mysql -> cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15, took 195.100843ms" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: handling container change event [CREATED]" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: starting container: mysql (Runtime ID: cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15)" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:23Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: started docker container for task: mysql -> cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15, took 473.163925ms" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [mysql]: sending container change event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c mysql -> RUNNING, Ports [{3306 3306 0.0.0.0 0}], Known Sent: NONE" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [mysql]: sent container change event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c mysql -> RUNNING, Ports [{3306 3306 0.0.0.0 0}], Known Sent: NONE" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: pulling image rakesh1594/rakesh:multi-docker for container rakesh concurrently" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:23Z msg="DockerGoClient: Starting to Poll for metrics for container cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15" module=docker_client.go
+level=info time=2020-08-20T08:19:23Z msg="TaskHandler: batching container event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c mysql -> RUNNING, Ports [{3306 3306 0.0.0.0 0}], Known Sent: NONE" module=task_handler.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:23Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Adding image name- rakesh1594/rakesh:multi-docker to Image state- sha256:6807de078c4b1796174df98db1a7f98827e463c1184aa4a4e62eb01fd64e03bd" module=types.go
+level=info time=2020-08-20T08:19:30Z msg="Updating container reference rakesh in Image State - sha256:6807de078c4b1796174df98db1a7f98827e463c1184aa4a4e62eb01fd64e03bd" module=types.go
+level=info time=2020-08-20T08:19:30Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: finished pulling image rakesh1594/rakesh:multi-docker for container rakesh in 7.170157037s" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:30Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=]: handling container change event [PULLED]" module=task_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:30Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: creating container: rakesh" module=docker_task_engine.go
+level=warn time=2020-08-20T08:19:30Z msg="Link name [mysql] found with no linkalias for container: [rakesh(rakesh1594/rakesh:multi-docker) (PULLED->RUNNING)] in task: [awseb-MakerslabMultidocker-env-xp7h7a8t4h:1 arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, TaskStatus: (NONE->RUNNING) Containers: [mysql (RUNNING->RUNNING),rakesh (PULLED->RUNNING),]]" module=task.go
+level=info time=2020-08-20T08:19:30Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created container name mapping for task:  rakesh -> ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-rakesh-a6ca93eb8b8885ea3100" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:30Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created docker container for task: rakesh -> 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:31Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: created docker container for task: rakesh -> 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1, took 228.12993ms" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: handling container change event [CREATED]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="api/task: Updating task's known status to: CREATED, task: awseb-MakerslabMultidocker-env-xp7h7a8t4h:1 arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, TaskStatus: (NONE->RUNNING) Containers: [mysql (RUNNING->RUNNING),rakesh (CREATED->RUNNING),]" module=task.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: container change also resulted in task change [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task not steady state or terminal; progressing it" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: starting container: rakesh (Runtime ID: 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1)" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:31Z msg="Task engine [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: started docker container for task: rakesh -> 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1, took 611.844535ms" module=docker_task_engine.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [rakesh]: sending container change event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c rakesh -> RUNNING, Ports [{5000 5000 0.0.0.0 0}], Known Sent: NONE" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [rakesh]: sent container change event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c rakesh -> RUNNING, Ports [{5000 5000 0.0.0.0 0}], Known Sent: NONE" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="api/task: Updating task's known status to: RUNNING, task: awseb-MakerslabMultidocker-env-xp7h7a8t4h:1 arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c, TaskStatus: (CREATED->RUNNING) Containers: [mysql (RUNNING->RUNNING),rakesh (RUNNING->RUNNING),]" module=task.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: container change also resulted in task change [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: sending task change event [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c -> RUNNING, Known Sent: NONE, PullStartedAt: 2020-08-20 08:19:10.763635726 +0000 UTC m=+39.706380424, PullStoppedAt: 2020-08-20 08:19:30.81572874 +0000 UTC m=+59.758473440, ExecutionStoppedAt: 0001-01-01 00:00:00 +0000 UTC]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="TaskHandler: batching container event: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c rakesh -> RUNNING, Ports [{5000 5000 0.0.0.0 0}], Known Sent: NONE" module=task_handler.go
+level=info time=2020-08-20T08:19:31Z msg="TaskHandler: Adding event: TaskChange: [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c -> RUNNING, Known Sent: NONE, PullStartedAt: 2020-08-20 08:19:10.763635726 +0000 UTC m=+39.706380424, PullStoppedAt: 2020-08-20 08:19:30.81572874 +0000 UTC m=+59.758473440, ExecutionStoppedAt: 0001-01-01 00:00:00 +0000 UTC, arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c mysql -> RUNNING, Ports [{3306 3306 0.0.0.0 0}], Known Sent: NONE, arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c rakesh -> RUNNING, Ports [{5000 5000 0.0.0.0 0}], Known Sent: NONE] sent: false" module=task_handler.go
+level=info time=2020-08-20T08:19:31Z msg="TaskHandler: Sending task change: TaskChange: [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c -> RUNNING, Known Sent: NONE, PullStartedAt: 2020-08-20 08:19:10.763635726 +0000 UTC m=+39.706380424, PullStoppedAt: 2020-08-20 08:19:30.81572874 +0000 UTC m=+59.758473440, ExecutionStoppedAt: 0001-01-01 00:00:00 +0000 UTC, arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c mysql -> RUNNING, Ports [{3306 3306 0.0.0.0 0}], Known Sent: NONE, arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c rakesh -> RUNNING, Ports [{5000 5000 0.0.0.0 0}], Known Sent: NONE] sent: false" module=task_handler_types.go
+level=info time=2020-08-20T08:19:31Z msg="DockerGoClient: Starting to Poll for metrics for container 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1" module=docker_client.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: sent task change event [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c -> RUNNING, Known Sent: NONE, PullStartedAt: 2020-08-20 08:19:10.763635726 +0000 UTC m=+39.706380424, PullStoppedAt: 2020-08-20 08:19:30.81572874 +0000 UTC m=+59.758473440, ExecutionStoppedAt: 0001-01-01 00:00:00 +0000 UTC]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:19:31Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:19:33Z msg="cloudwatch metrics for container 7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1 not collected, reason (cpu): need at least 2 data points in queue to calculate CW stats set" module=engine.go
+level=info time=2020-08-20T08:19:33Z msg="cloudwatch metrics for container cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15 not collected, reason (cpu): need at least 2 data points in queue to calculate CW stats set" module=engine.go
+level=warn time=2020-08-20T08:19:33Z msg="Error publishing metrics: stats engine: no task metrics to report" module=client.go
+level=info time=2020-08-20T08:19:40Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: checking to verify it's still at steady state." module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:24:57Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:29:25Z msg="ACS Websocket connection closed for a valid reason" module=acs_handler.go
+level=info time=2020-08-20T08:29:25Z msg="ACS Websocket connection closed for a valid reason: EOF" module=acs_handler.go
+level=info time=2020-08-20T08:29:25Z msg="Establishing a Websocket connection to https://ecs-a-17.us-east-1.amazonaws.com/ws?agentHash=a250409c&agentVersion=1.42.0&clusterArn=awseb-MakerslabMultidocker-env-xp7h7a8t4h&containerInstanceArn=arn%3Aaws%3Aecs%3Aus-east-1%3A528060695182%3Acontainer-instance%2F6022b23e-7a7b-4b50-9eda-2cc267cc4368&dockerVersion=DockerVersion%3A+19.03.6-ce&sendCredentials=false&seqNum=1" module=client.go
+level=info time=2020-08-20T08:29:25Z msg="Connected to ACS endpoint" module=acs_handler.go
+level=info time=2020-08-20T08:29:26Z msg="Saving state!" module=state_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: checking to verify it's still at steady state." module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=mysql runtimeID=cffacbcacdb62e91d429ce7fa1868c173f6e89e4b5a49adc9632419bda447c15]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: handling container change event [RUNNING]" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: Container [name=rakesh runtimeID=7e912f6a099c3a3d748b68c3d1426a59bff23cde241ec5fe2f714ab04a59f8d1]: container change RUNNING->RUNNING is redundant" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: task at steady state: RUNNING" module=task_manager.go
+level=info time=2020-08-20T08:30:10Z msg="Managed task [arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c]: waiting for event for task" module=task_manager.go
+
+
+
+-------------------------------------
+/var/log/docker
+-------------------------------------
+time="2020-08-20T08:17:44.657773319Z" level=info msg="containerd successfully booted in 0.062935s"
+time="2020-08-20T08:17:44.691294969Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+time="2020-08-20T08:17:44.691321690Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2020-08-20T08:17:44.691340530Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+time="2020-08-20T08:17:44.691351845Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2020-08-20T08:17:44.694787766Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+time="2020-08-20T08:17:44.694808921Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2020-08-20T08:17:44.694831168Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+time="2020-08-20T08:17:44.694842883Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2020-08-20T08:17:44.705714769Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+time="2020-08-20T08:17:44.726715661Z" level=warning msg="Your kernel does not support cgroup blkio weight"
+time="2020-08-20T08:17:44.726740581Z" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+time="2020-08-20T08:17:44.726889553Z" level=info msg="Loading containers: start."
+time="2020-08-20T08:17:44.790810921Z" level=warning msg="Running iptables --wait -t nat -L -n failed with message: `iptables v1.4.18: unknown option \"--wait\"\nTry `iptables -h' or 'iptables --help' for more information.`, error: exit status 2"
+time="2020-08-20T08:17:45.461784791Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+time="2020-08-20T08:17:45.596882441Z" level=info msg="Loading containers: done."
+time="2020-08-20T08:17:45.766746343Z" level=info msg="Docker daemon" commit=369ce74 graphdriver(s)=overlay2 version=19.03.6-ce
+time="2020-08-20T08:17:45.767569423Z" level=info msg="Daemon has completed initialization"
+time="2020-08-20T08:17:45.800685400Z" level=info msg="API listen on /var/run/docker.sock"
+time="2020-08-20T08:17:52.214859252Z" level=info msg="Processing signal 'terminated'"
+time="2020-08-20T08:17:52.215505639Z" level=info msg="Daemon shutdown complete"
+time="2020-08-20T08:17:52.215546543Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=moby
+time="2020-08-20T08:17:52.215576510Z" level=info msg="stopping healthcheck following graceful shutdown" module=libcontainerd
+time="2020-08-20T08:17:52.215634255Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+\nThu Aug 20 08:17:54 UTC 2020\n
+time="2020-08-20T08:17:54.415425131Z" level=info msg="Starting up"
+time="2020-08-20T08:17:54.417751841Z" level=info msg="libcontainerd: started new containerd process" pid=3520
+time="2020-08-20T08:17:54.417792223Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+time="2020-08-20T08:17:54.417803509Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2020-08-20T08:17:54.417825691Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+time="2020-08-20T08:17:54.417841205Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2020-08-20T08:17:54.457057305Z" level=info msg="starting containerd" revision=ff48f57fc83a8c44cf4ad5d672424a98ba37ded6 version=1.3.2
+time="2020-08-20T08:17:54.484493126Z" level=info msg="loading plugin \"io.containerd.content.v1.content\"..." type=io.containerd.content.v1
+time="2020-08-20T08:17:54.484609535Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.btrfs\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.484776980Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.btrfs\"..." error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter: skip plugin" type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.484806222Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.devmapper\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.484830057Z" level=warning msg="failed to load plugin io.containerd.snapshotter.v1.devmapper" error="devmapper not configured"
+time="2020-08-20T08:17:54.484843118Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.aufs\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.485804781Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.aufs\"..." error="modprobe aufs failed: \"modprobe: FATAL: Module aufs not found.\\n\": exit status 1: skip plugin" type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.485832661Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.native\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.485890618Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.overlayfs\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.486014478Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.zfs\"..." type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.486122299Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.zfs\"..." error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.zfs must be a zfs filesystem to be used with the zfs snapshotter: skip plugin" type=io.containerd.snapshotter.v1
+time="2020-08-20T08:17:54.486147273Z" level=info msg="loading plugin \"io.containerd.metadata.v1.bolt\"..." type=io.containerd.metadata.v1
+time="2020-08-20T08:17:54.486183328Z" level=warning msg="could not use snapshotter devmapper in metadata plugin" error="devmapper not configured"
+time="2020-08-20T08:17:54.486196759Z" level=info msg="metadata content store policy set" policy=shared
+time="2020-08-20T08:17:54.494421121Z" level=info msg="loading plugin \"io.containerd.differ.v1.walking\"..." type=io.containerd.differ.v1
+time="2020-08-20T08:17:54.494449812Z" level=info msg="loading plugin \"io.containerd.gc.v1.scheduler\"..." type=io.containerd.gc.v1
+time="2020-08-20T08:17:54.494482412Z" level=info msg="loading plugin \"io.containerd.service.v1.containers-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494502559Z" level=info msg="loading plugin \"io.containerd.service.v1.content-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494517054Z" level=info msg="loading plugin \"io.containerd.service.v1.diff-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494532669Z" level=info msg="loading plugin \"io.containerd.service.v1.images-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494547696Z" level=info msg="loading plugin \"io.containerd.service.v1.leases-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494562444Z" level=info msg="loading plugin \"io.containerd.service.v1.namespaces-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494578478Z" level=info msg="loading plugin \"io.containerd.service.v1.snapshots-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.494593326Z" level=info msg="loading plugin \"io.containerd.runtime.v1.linux\"..." type=io.containerd.runtime.v1
+time="2020-08-20T08:17:54.494708761Z" level=info msg="loading plugin \"io.containerd.runtime.v2.task\"..." type=io.containerd.runtime.v2
+time="2020-08-20T08:17:54.494780063Z" level=info msg="loading plugin \"io.containerd.monitor.v1.cgroups\"..." type=io.containerd.monitor.v1
+time="2020-08-20T08:17:54.495084245Z" level=info msg="loading plugin \"io.containerd.service.v1.tasks-service\"..." type=io.containerd.service.v1
+time="2020-08-20T08:17:54.495112155Z" level=info msg="loading plugin \"io.containerd.internal.v1.restart\"..." type=io.containerd.internal.v1
+time="2020-08-20T08:17:54.495152151Z" level=info msg="loading plugin \"io.containerd.grpc.v1.containers\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495168236Z" level=info msg="loading plugin \"io.containerd.grpc.v1.content\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495182071Z" level=info msg="loading plugin \"io.containerd.grpc.v1.diff\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495195645Z" level=info msg="loading plugin \"io.containerd.grpc.v1.events\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495209328Z" level=info msg="loading plugin \"io.containerd.grpc.v1.healthcheck\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495223073Z" level=info msg="loading plugin \"io.containerd.grpc.v1.images\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495241603Z" level=info msg="loading plugin \"io.containerd.grpc.v1.leases\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495255755Z" level=info msg="loading plugin \"io.containerd.grpc.v1.namespaces\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495269432Z" level=info msg="loading plugin \"io.containerd.internal.v1.opt\"..." type=io.containerd.internal.v1
+time="2020-08-20T08:17:54.495313382Z" level=info msg="loading plugin \"io.containerd.grpc.v1.snapshots\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495334106Z" level=info msg="loading plugin \"io.containerd.grpc.v1.tasks\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495349714Z" level=info msg="loading plugin \"io.containerd.grpc.v1.version\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495362795Z" level=info msg="loading plugin \"io.containerd.grpc.v1.introspection\"..." type=io.containerd.grpc.v1
+time="2020-08-20T08:17:54.495526918Z" level=info msg=serving... address=/var/run/docker/containerd/containerd-debug.sock
+time="2020-08-20T08:17:54.495575732Z" level=info msg=serving... address=/var/run/docker/containerd/containerd.sock.ttrpc
+time="2020-08-20T08:17:54.495618391Z" level=info msg=serving... address=/var/run/docker/containerd/containerd.sock
+time="2020-08-20T08:17:54.495630501Z" level=info msg="containerd successfully booted in 0.039092s"
+time="2020-08-20T08:17:54.522212240Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+time="2020-08-20T08:17:54.522239130Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2020-08-20T08:17:54.522259452Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+time="2020-08-20T08:17:54.522271109Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2020-08-20T08:17:54.523103319Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+time="2020-08-20T08:17:54.523120823Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2020-08-20T08:17:54.523135776Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock 0  <nil>}] <nil>}" module=grpc
+time="2020-08-20T08:17:54.523146899Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2020-08-20T08:17:54.523788139Z" level=warning msg="[graphdriver] WARNING: the devicemapper storage-driver is deprecated, and will be removed in a future release"
+time="2020-08-20T08:17:54.548085563Z" level=info msg="Creating filesystem ext4 on device docker-202:1-399495-base, mkfs args: [/dev/mapper/docker-202:1-399495-base]" storage-driver=devicemapper
+time="2020-08-20T08:18:28.221106136Z" level=info msg="Successfully created filesystem ext4 on device docker-202:1-399495-base" storage-driver=devicemapper
+time="2020-08-20T08:18:28.267263797Z" level=warning msg="Your kernel does not support cgroup blkio weight"
+time="2020-08-20T08:18:28.267309696Z" level=warning msg="Your kernel does not support cgroup blkio weight_device"
+time="2020-08-20T08:18:28.268960765Z" level=info msg="Loading containers: start."
+time="2020-08-20T08:18:28.275307456Z" level=warning msg="Running iptables --wait -t nat -L -n failed with message: `iptables v1.4.18: unknown option \"--wait\"\nTry `iptables -h' or 'iptables --help' for more information.`, error: exit status 2"
+time="2020-08-20T08:18:28.348630191Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+time="2020-08-20T08:18:28.378607782Z" level=info msg="Loading containers: done."
+time="2020-08-20T08:18:28.429892044Z" level=info msg="Docker daemon" commit=369ce74 graphdriver(s)=devicemapper version=19.03.6-ce
+time="2020-08-20T08:18:28.430531346Z" level=info msg="Daemon has completed initialization"
+time="2020-08-20T08:18:28.461808256Z" level=info msg="API listen on /var/run/docker.sock"
+time="2020-08-20T08:18:30.883991749Z" level=info msg="shim containerd-shim started" address=/containerd-shim/23efeef71cba9d80fe6f2afd3bdea1429652a84d74aa4fc7c40fea4e0d74f9e2.sock debug=false pid=3856
+time="2020-08-20T08:19:23.302833938Z" level=info msg="shim containerd-shim started" address=/containerd-shim/8973b0230fb3a5acfd2a1abab46440d58d8aa69663f8c09a31fc503761cbbd2f.sock debug=false pid=4594
+time="2020-08-20T08:19:31.195648523Z" level=info msg="shim containerd-shim started" address=/containerd-shim/6edc87561e8e11374b142b130384ee845ce86e512138663465cef46b6c26c775.sock debug=false pid=4911
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+  + EB_SUPPORT_FILES=/opt/elasticbeanstalk/containerfiles/support
+  ++ /opt/elasticbeanstalk/bin/get-config container -k host_log_dir
+  + EB_CONFIG_DOCKER_LOG_HOST_DIR=/var/log/containers
+  ++ /opt/elasticbeanstalk/bin/get-config container -k app_staging_dir
+  + EB_CONFIG_APP_STAGING=/var/app/staging
+  + '[' -z /var/app/staging ']'
+  + rm -rf /var/app/staging
+  + mkdir -p /var/app/staging
+  ++ file -m /opt/elasticbeanstalk/containerfiles/support/beanstalk-magic -b --mime-type /opt/elasticbeanstalk/deploy/appsource/source_bundle
+  + APP_BUNDLE_TYPE=application/json
+  + '[' application/json = application/zip ']'
+  + cp /opt/elasticbeanstalk/deploy/appsource/source_bundle /var/app/staging/Dockerrun.aws.json
+  ++ jq -r '.containerDefinitions[].name'
+  ++ cat /var/app/staging/Dockerrun.aws.json
+  + for CONTAINER in '`cat $EB_CONFIG_APP_STAGING/Dockerrun.aws.json | jq -r .containerDefinitions[].name`'
+  + CONTAINER_LOG_DIR=/var/log/containers/mysql
+  + mkdir -p /var/log/containers/mysql
+  + chmod 777 /var/log/containers/mysql
+  + /opt/elasticbeanstalk/bin/log-conf -n applogs-mysql '-l/var/log/containers/mysql/*.log' -r size=1M,rotate=5
+  + /opt/elasticbeanstalk/bin/log-conf -n applogs-mysql-rotated '-l/var/log/containers/mysql.log*' -t bundlelogs
+  + for CONTAINER in '`cat $EB_CONFIG_APP_STAGING/Dockerrun.aws.json | jq -r .containerDefinitions[].name`'
+  + CONTAINER_LOG_DIR=/var/log/containers/rakesh
+  + mkdir -p /var/log/containers/rakesh
+  + chmod 777 /var/log/containers/rakesh
+  + /opt/elasticbeanstalk/bin/log-conf -n applogs-rakesh '-l/var/log/containers/rakesh/*.log' -r size=1M,rotate=5
+  + /opt/elasticbeanstalk/bin/log-conf -n applogs-rakesh-rotated '-l/var/log/containers/rakesh.log*' -t bundlelogs
+[2020-08-20T08:19:07.639Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/AppDeployPreHook/02loopback-check.sh] : Starting activity...
+[2020-08-20T08:19:07.716Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/AppDeployPreHook/02loopback-check.sh] : Completed activity. Result:
+  WARNING: the devicemapper storage-driver is deprecated, and will be removed in a future release.
+[2020-08-20T08:19:07.717Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/AppDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
+[2020-08-20T08:19:07.717Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/EbExtensionPostBuild] : Starting activity...
+[2020-08-20T08:19:08.120Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2020-08-20T08:19:08.121Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
+[2020-08-20T08:19:08.137Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/EbExtensionPostBuild] : Completed activity.
+[2020-08-20T08:19:08.137Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/InfraCleanEbExtension] : Starting activity...
+[2020-08-20T08:19:08.138Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0/InfraCleanEbExtension] : Completed activity. Result:
+  Cleaned ebextensions subdirectories from /var/app/staging.
+[2020-08-20T08:19:08.138Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage0] : Completed activity. Result:
+  Application deployment - Command CMD-Startup stage 0 completed
+[2020-08-20T08:19:08.138Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1] : Starting activity...
+[2020-08-20T08:19:08.138Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook] : Starting activity...
+[2020-08-20T08:19:08.140Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/00stop-task.sh] : Starting activity...
+[2020-08-20T08:19:08.145Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/00stop-task.sh] : Completed activity. Result:
+  + grep -q 'eb-ecs start/'
+  + initctl status eb-ecs
+[2020-08-20T08:19:08.145Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/01flip-dir.sh] : Starting activity...
+[2020-08-20T08:19:08.336Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/01flip-dir.sh] : Completed activity. Result:
+  + . /opt/elasticbeanstalk/hooks/common.sh
+  ++ /opt/elasticbeanstalk/bin/get-config container -k app_deploy_dir
+  + EB_CONFIG_APP_CURRENT=/var/app/current
+  ++ /opt/elasticbeanstalk/bin/get-config container -k app_staging_dir
+  + EB_CONFIG_APP_STAGING=/var/app/staging
+  + '[' -z /var/app/staging ']'
+  + '[' -d /var/app/current ']'
+  + mv /var/app/staging /var/app/current
+  + nohup rm -rf /var/app/current.old
+[2020-08-20T08:19:08.336Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/02update-credentials.sh] : Starting activity...
+[2020-08-20T08:19:08.538Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/02update-credentials.sh] : Completed activity.
+[2020-08-20T08:19:08.538Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/03start-task.sh] : Starting activity...
+[2020-08-20T08:19:32.071Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/03start-task.sh] : Completed activity. Result:
+  + . /opt/elasticbeanstalk/hooks/common.sh
+  + RETRY=0
+  + initctl start eb-ecs EB_EVENT_FILE=/tmp/eventsfile20200820-4096-15p64nk
+  eb-ecs start/running, process 5036
+[2020-08-20T08:19:32.071Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/04monitor_pids.sh] : Starting activity...
+[2020-08-20T08:19:32.303Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook/04monitor_pids.sh] : Completed activity. Result:
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --name application --location /var/run/docker.pid
+[2020-08-20T08:19:32.303Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/enact.
+[2020-08-20T08:19:32.304Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployPostHook] : Starting activity...
+[2020-08-20T08:19:32.305Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployPostHook/00_clean_imgs.sh] : Starting activity...
+[2020-08-20T08:19:34.077Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployPostHook/00_clean_imgs.sh] : Completed activity.
+[2020-08-20T08:19:34.077Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/AppDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
+[2020-08-20T08:19:34.077Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/PostInitHook] : Starting activity...
+[2020-08-20T08:19:34.077Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1/PostInitHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/postinit.
+[2020-08-20T08:19:34.078Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/StartupStage1] : Completed activity. Result:
+  Application deployment - Command CMD-Startup stage 1 completed
+[2020-08-20T08:19:34.078Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter] : Starting activity...
+[2020-08-20T08:19:34.078Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2020-08-20T08:19:34.079Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2020-08-20T08:19:34.260Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2020-08-20T08:19:34.260Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2020-08-20T08:19:34.260Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1/AddonsAfter] : Completed activity.
+[2020-08-20T08:19:34.260Z] INFO  [4096]  - [Application deployment makerslab-multidocker-source@1] : Completed activity. Result:
+  Application deployment - Command CMD-Startup succeeded
+[2020-08-20T08:31:07.274Z] INFO  [6917]  - [CMD-TailLogs] : Starting activity...
+[2020-08-20T08:31:07.275Z] INFO  [6917]  - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2020-08-20T08:31:07.275Z] INFO  [6917]  - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2020-08-20T08:31:07.275Z] INFO  [6917]  - [CMD-TailLogs/TailLogsDockerPS] : Starting activity...
+[2020-08-20T08:31:07.275Z] INFO  [6917]  - [CMD-TailLogs/TailLogsDockerPS/DockerPS] : Starting activity...
+[2020-08-20T08:31:07.359Z] INFO  [6917]  - [CMD-TailLogs/TailLogsDockerPS/DockerPS] : Completed activity.
+[2020-08-20T08:31:07.359Z] INFO  [6917]  - [CMD-TailLogs/TailLogsDockerPS] : Completed activity. Result:
+  CMD-TailLogs - stage 0 - Command CMD-TailLogs stage 0 completed
+[2020-08-20T08:31:07.359Z] INFO  [6917]  - [CMD-TailLogs/TailLogs] : Starting activity...
+[2020-08-20T08:31:07.359Z] INFO  [6917]  - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+[2020-08-20T08:17:49.101Z] INFO  [3093]  : Updated manifest cache: deployment ID 1 and serial 1.
+[2020-08-20T08:17:49.101Z] DEBUG [3093]  : Loaded definition of Command CMD-PreInit.
+[2020-08-20T08:17:49.102Z] INFO  [3093]  : Executing Initialization
+[2020-08-20T08:17:49.102Z] INFO  [3093]  : Executing command: CMD-PreInit...
+[2020-08-20T08:17:49.102Z] INFO  [3093]  : Executing command CMD-PreInit activities...
+[2020-08-20T08:17:49.102Z] DEBUG [3093]  : Setting environment variables..
+[2020-08-20T08:17:49.102Z] INFO  [3093]  : Running AddonsBefore for command CMD-PreInit...
+[2020-08-20T08:17:51.538Z] DEBUG [3093]  : Running stages of Command CMD-PreInit from stage 0 to stage 0...
+[2020-08-20T08:17:51.538Z] INFO  [3093]  : Running stage 0 of command CMD-PreInit...
+[2020-08-20T08:17:51.538Z] DEBUG [3093]  : Loaded 2 actions for stage 0.
+[2020-08-20T08:17:51.538Z] INFO  [3093]  : Running 1 of 2 actions: DownloadSourceBundle...
+[2020-08-20T08:17:51.865Z] INFO  [3093]  : Running 2 of 2 actions: PreInitHook...
+[2020-08-20T08:18:33.607Z] INFO  [3093]  : Running AddonsAfter for command CMD-PreInit...
+[2020-08-20T08:18:33.608Z] INFO  [3093]  : Command CMD-PreInit succeeded!
+[2020-08-20T08:18:33.608Z] INFO  [3093]  : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2020-08-20T08:19:05.017Z] DEBUG [4096]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-20T08:19:05.017Z] DEBUG [4096]  : Checking if the command processor should execute...
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Checking whether the command is applicable to instance (i-04f73a7ee6b1602d0)..
+[2020-08-20T08:19:05.020Z] INFO  [4096]  : Command is applicable to this instance (i-04f73a7ee6b1602d0)..
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Checking if the received command stage is valid..
+[2020-08-20T08:19:05.020Z] INFO  [4096]  : No stage_num in command. Valid stage..
+[2020-08-20T08:19:05.020Z] INFO  [4096]  : Received command CMD-Startup: {"execution_data"=>"{\"leader_election\":\"true\"}", "instance_ids"=>["i-04f73a7ee6b1602d0"], "command_name"=>"CMD-Startup", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"36f57182-365e-4c13-82cc-7e19c316b5ba"}
+[2020-08-20T08:19:05.020Z] INFO  [4096]  : Command processor should execute command.
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Storing current stage..
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-20T08:19:05.020Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-20T08:19:05.022Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-20T08:19:05.023Z] INFO  [4096]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-20T08:19:05.025Z] INFO  [4096]  : Updating Command definition of addon logstreaming.
+[2020-08-20T08:19:05.025Z] INFO  [4096]  : Updating Command definition of addon logpublish.
+[2020-08-20T08:19:05.025Z] DEBUG [4096]  : Refreshing metadata...
+[2020-08-20T08:19:05.429Z] DEBUG [4096]  : Refreshed environment metadata.
+[2020-08-20T08:19:05.431Z] INFO  [4096]  : Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+[2020-08-20T08:19:05.431Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_AppSourceUrlFileContent||url..
+[2020-08-20T08:19:05.432Z] INFO  [4096]  : Created appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+[2020-08-20T08:19:05.432Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent..
+[2020-08-20T08:19:05.434Z] INFO  [4096]  : Created container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2020-08-20T08:19:05.434Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-20T08:19:05.435Z] DEBUG [4096]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-20T08:19:05.435Z] INFO  [4096]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-20T08:19:05.436Z] INFO  [4096]  : Updating Command definition of addon logstreaming.
+[2020-08-20T08:19:05.436Z] INFO  [4096]  : Updating Command definition of addon logpublish.
+[2020-08-20T08:19:05.436Z] DEBUG [4096]  : Loaded definition of Command CMD-Startup.
+[2020-08-20T08:19:05.438Z] INFO  [4096]  : Executing Application deployment
+[2020-08-20T08:19:05.438Z] INFO  [4096]  : Executing command: CMD-Startup...
+[2020-08-20T08:19:05.438Z] INFO  [4096]  : Executing command CMD-Startup activities...
+[2020-08-20T08:19:05.438Z] DEBUG [4096]  : Setting environment variables..
+[2020-08-20T08:19:05.438Z] INFO  [4096]  : Running AddonsBefore for command CMD-Startup...
+[2020-08-20T08:19:05.567Z] DEBUG [4096]  : Running stages of Command CMD-Startup from stage 0 to stage 1...
+[2020-08-20T08:19:05.567Z] INFO  [4096]  : Running stage 0 of command CMD-Startup...
+[2020-08-20T08:19:05.567Z] INFO  [4096]  : Running leader election...
+[2020-08-20T08:19:05.966Z] INFO  [4096]  : Instance is Leader.
+[2020-08-20T08:19:05.967Z] DEBUG [4096]  : Loaded 7 actions for stage 0.
+[2020-08-20T08:19:05.967Z] INFO  [4096]  : Running 1 of 7 actions: HealthdLogRotation...
+[2020-08-20T08:19:05.976Z] INFO  [4096]  : Running 2 of 7 actions: HealthdHTTPDLogging...
+[2020-08-20T08:19:05.976Z] INFO  [4096]  : Running 3 of 7 actions: HealthdNginxLogging...
+[2020-08-20T08:19:05.977Z] INFO  [4096]  : Running 4 of 7 actions: EbExtensionPreBuild...
+[2020-08-20T08:19:06.414Z] INFO  [4096]  : Running 5 of 7 actions: AppDeployPreHook...
+[2020-08-20T08:19:07.717Z] INFO  [4096]  : Running 6 of 7 actions: EbExtensionPostBuild...
+[2020-08-20T08:19:08.137Z] INFO  [4096]  : Running 7 of 7 actions: InfraCleanEbExtension...
+[2020-08-20T08:19:08.138Z] INFO  [4096]  : Running stage 1 of command CMD-Startup...
+[2020-08-20T08:19:08.138Z] DEBUG [4096]  : Loaded 3 actions for stage 1.
+[2020-08-20T08:19:08.138Z] INFO  [4096]  : Running 1 of 3 actions: AppDeployEnactHook...
+[2020-08-20T08:19:32.303Z] INFO  [4096]  : Running 2 of 3 actions: AppDeployPostHook...
+[2020-08-20T08:19:34.077Z] INFO  [4096]  : Running 3 of 3 actions: PostInitHook...
+[2020-08-20T08:19:34.078Z] INFO  [4096]  : Running AddonsAfter for command CMD-Startup...
+[2020-08-20T08:19:34.260Z] INFO  [4096]  : Command CMD-Startup succeeded!
+[2020-08-20T08:19:34.261Z] INFO  [4096]  : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"Could not determine task definition or revision from deployment manifest.","severity":"TRACE","timestamp":1597911548},{"msg":"Starting new ECS task with awseb-MakerslabMultidocker-env-xp7h7a8t4h.","severity":"TRACE","timestamp":1597911550},{"msg":"ECS task: arn:aws:ecs:us-east-1:528060695182:task/e7723a08-87e1-4e27-b372-9a46003db61c is RUNNING.","severity":"TRACE","timestamp":1597911572},{"msg":"Could not determine task definition or revision from deployment manifest.","severity":"TRACE","timestamp":1597911573}]}]}
+[2020-08-20T08:31:07.262Z] DEBUG [6917]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-20T08:31:07.262Z] DEBUG [6917]  : Checking if the command processor should execute...
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Checking whether the command is applicable to instance (i-04f73a7ee6b1602d0)..
+[2020-08-20T08:31:07.265Z] INFO  [6917]  : Command is applicable to this instance (i-04f73a7ee6b1602d0)..
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Checking if the received command stage is valid..
+[2020-08-20T08:31:07.265Z] INFO  [6917]  : No stage_num in command. Valid stage..
+[2020-08-20T08:31:07.265Z] INFO  [6917]  : Received command CMD-TailLogs: {"execution_data"=>"*", "instance_ids"=>["i-04f73a7ee6b1602d0"], "data"=>"d7c8a106-6210-4df7-893b-02fad8572d45", "command_name"=>"CMD-TailLogs", "api_version"=>"1.0", "resource_name"=>"AWSEBAutoScalingGroup", "request_id"=>"d7c8a106-6210-4df7-893b-02fad8572d45"}
+[2020-08-20T08:31:07.265Z] INFO  [6917]  : Command processor should execute command.
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Storing current stage..
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Stage_num does not exist. Not saving null stage. Returning..
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2020-08-20T08:31:07.265Z] DEBUG [6917]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2020-08-20T08:31:07.269Z] DEBUG [6917]  : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2020-08-20T08:31:07.269Z] INFO  [6917]  : Found enabled addons: ["logstreaming", "logpublish"].
+[2020-08-20T08:31:07.272Z] INFO  [6917]  : Updating Command definition of addon logstreaming.
+[2020-08-20T08:31:07.272Z] INFO  [6917]  : Updating Command definition of addon logpublish.
+[2020-08-20T08:31:07.272Z] DEBUG [6917]  : Loaded definition of Command CMD-TailLogs.
+[2020-08-20T08:31:07.274Z] INFO  [6917]  : Executing CMD-TailLogs
+[2020-08-20T08:31:07.275Z] INFO  [6917]  : Executing command: CMD-TailLogs...
+[2020-08-20T08:31:07.275Z] INFO  [6917]  : Executing command CMD-TailLogs activities...
+[2020-08-20T08:31:07.275Z] DEBUG [6917]  : Setting environment variables..
+[2020-08-20T08:31:07.275Z] INFO  [6917]  : Running AddonsBefore for command CMD-TailLogs...
+[2020-08-20T08:31:07.275Z] DEBUG [6917]  : Running stages of Command CMD-TailLogs from stage 0 to stage 1...
+[2020-08-20T08:31:07.275Z] INFO  [6917]  : Running stage 0 of command CMD-TailLogs...
+[2020-08-20T08:31:07.275Z] DEBUG [6917]  : Loaded 1 actions for stage 0.
+[2020-08-20T08:31:07.275Z] INFO  [6917]  : Running 1 of 1 actions: DockerPS...
+[2020-08-20T08:31:07.359Z] INFO  [6917]  : Running stage 1 of command CMD-TailLogs...
+[2020-08-20T08:31:07.359Z] DEBUG [6917]  : Loaded 1 actions for stage 1.
+[2020-08-20T08:31:07.359Z] INFO  [6917]  : Running 1 of 1 actions: TailLogs...
+
+
+
+-------------------------------------
+/var/log/docker-ps.log
+-------------------------------------
+'docker ps' ran at Thu Aug 20 08:31:07 UTC 2020: 
+CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS                    PORTS                               NAMES
+7e912f6a099c        rakesh1594/rakesh:multi-docker   "java -jar /app.jar"     11 minutes ago      Up 11 minutes             0.0.0.0:5000->5000/tcp              ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-rakesh-a6ca93eb8b8885ea3100
+cffacbcacdb6        mysql:5.7                        "docker-entrypoint.sâ€¦"   11 minutes ago      Up 11 minutes             0.0.0.0:3306->3306/tcp, 33060/tcp   ecs-awseb-MakerslabMultidocker-env-xp7h7a8t4h-1-mysql-d487de839a8bbed68301
+c38b14701d0e        amazon/amazon-ecs-agent:latest   "/agent"                 12 minutes ago      Up 12 minutes (healthy)                                       ecs-agent
+
+
+
+-------------------------------------
+/var/log/containers/mysql-cffacbcacdb6-stdouterr.log
+-------------------------------------
+2020-08-20 08:19:39+00:00 [Note] [Entrypoint]: Creating user user
+2020-08-20 08:19:39+00:00 [Note] [Entrypoint]: Giving user user access to schema maker
+
+2020-08-20 08:19:39+00:00 [Note] [Entrypoint]: Stopping temporary server
+2020-08-20T08:19:39.634588Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2020-08-20T08:19:39.634824Z 0 [Note] Shutting down slave threads
+2020-08-20T08:19:39.634852Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2020-08-20T08:19:39.634897Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2020-08-20T08:19:39.635360Z 0 [Note] Binlog end
+2020-08-20T08:19:39.636434Z 0 [Note] Shutting down plugin 'ngram'
+2020-08-20T08:19:39.637535Z 0 [Note] Shutting down plugin 'partition'
+2020-08-20T08:19:39.637672Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2020-08-20T08:19:39.637701Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2020-08-20T08:19:39.637716Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2020-08-20T08:19:39.637896Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2020-08-20T08:19:39.638272Z 0 [Note] Shutting down plugin 'MyISAM'
+2020-08-20T08:19:39.638309Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2020-08-20T08:19:39.638326Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2020-08-20T08:19:39.638338Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2020-08-20T08:19:39.638349Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2020-08-20T08:19:39.638361Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2020-08-20T08:19:39.638372Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2020-08-20T08:19:39.638383Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2020-08-20T08:19:39.638395Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2020-08-20T08:19:39.638406Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2020-08-20T08:19:39.638621Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2020-08-20T08:19:39.638656Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2020-08-20T08:19:39.638672Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2020-08-20T08:19:39.638683Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2020-08-20T08:19:39.638695Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2020-08-20T08:19:39.638706Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2020-08-20T08:19:39.638717Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2020-08-20T08:19:39.639021Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2020-08-20T08:19:39.639053Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2020-08-20T08:19:39.639069Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2020-08-20T08:19:39.639080Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2020-08-20T08:19:39.639381Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2020-08-20T08:19:39.639413Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2020-08-20T08:19:39.639429Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2020-08-20T08:19:39.639441Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2020-08-20T08:19:39.639452Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2020-08-20T08:19:39.639463Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2020-08-20T08:19:39.639474Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2020-08-20T08:19:39.639485Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2020-08-20T08:19:39.639497Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2020-08-20T08:19:39.639508Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2020-08-20T08:19:39.639732Z 0 [Note] Shutting down plugin 'InnoDB'
+2020-08-20T08:19:39.640170Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2020-08-20T08:19:39.640496Z 0 [Note] InnoDB: Starting shutdown...
+2020-08-20T08:19:39.742595Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+2020-08-20T08:19:39.743282Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 200820  8:19:39
+2020-08-20T08:19:41.284212Z 0 [Note] InnoDB: Shutdown completed; log sequence number 12578055
+2020-08-20T08:19:41.284953Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-08-20T08:19:41.285504Z 0 [Note] Shutting down plugin 'MEMORY'
+2020-08-20T08:19:41.285713Z 0 [Note] Shutting down plugin 'CSV'
+2020-08-20T08:19:41.285748Z 0 [Note] Shutting down plugin 'sha256_password'
+2020-08-20T08:19:41.285764Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2020-08-20T08:19:41.286378Z 0 [Note] Shutting down plugin 'binlog'
+2020-08-20T08:19:41.288474Z 0 [Note] mysqld: Shutdown complete
+
+2020-08-20 08:19:41+00:00 [Note] [Entrypoint]: Temporary server stopped
+
+2020-08-20 08:19:41+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+
+2020-08-20T08:19:41.985582Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2020-08-20T08:19:41.990609Z 0 [Note] mysqld (mysqld 5.7.31) starting as process 1 ...
+2020-08-20T08:19:41.998970Z 0 [Note] InnoDB: PUNCH HOLE support available
+2020-08-20T08:19:41.999076Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2020-08-20T08:19:41.999105Z 0 [Note] InnoDB: Uses event mutexes
+2020-08-20T08:19:41.999123Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2020-08-20T08:19:41.999135Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-08-20T08:19:41.999147Z 0 [Note] InnoDB: Using Linux native AIO
+2020-08-20T08:19:41.999614Z 0 [Note] InnoDB: Number of pools: 1
+2020-08-20T08:19:42.000045Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2020-08-20T08:19:42.001937Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2020-08-20T08:19:42.019781Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-08-20T08:19:42.024822Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2020-08-20T08:19:42.039578Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2020-08-20T08:19:42.098334Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-08-20T08:19:42.098586Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-08-20T08:19:42.143403Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2020-08-20T08:19:42.147071Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2020-08-20T08:19:42.147174Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2020-08-20T08:19:42.147666Z 0 [Note] InnoDB: Waiting for purge to start
+2020-08-20T08:19:42.198627Z 0 [Note] InnoDB: 5.7.31 started; log sequence number 12578055
+2020-08-20T08:19:42.199324Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2020-08-20T08:19:42.210625Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2020-08-20T08:19:42.223751Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200820  8:19:42
+2020-08-20T08:19:42.247776Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2020-08-20T08:19:42.247957Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2020-08-20T08:19:42.248869Z 0 [Warning] CA certificate ca.pem is self signed.
+2020-08-20T08:19:42.248982Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2020-08-20T08:19:42.249643Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2020-08-20T08:19:42.249766Z 0 [Note] IPv6 is available.
+2020-08-20T08:19:42.249806Z 0 [Note]   - '::' resolves to '::';
+2020-08-20T08:19:42.249841Z 0 [Note] Server socket created on IP: '::'.
+2020-08-20T08:19:42.252326Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2020-08-20T08:19:42.288537Z 0 [Note] Event Scheduler: Loaded 0 events
+2020-08-20T08:19:42.290713Z 0 [Note] mysqld: ready for connections.
+Version: '5.7.31'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+
+
